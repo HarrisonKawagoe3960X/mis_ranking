@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+{% load static %}
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+ <script type="text/javascript" src="{% static 'js/app.js' %}"></script>
+<p>New Game</p>
+<form id="submit_form" action="/postnewgame" method="post" accept-charset="UTF-8">
+{% csrf_token %}
+<input id="gamename" name="gamename" value="ゲーム名">
+<button id="btn">Submit</button>
+</form>
+<p id="gameid"></p>
