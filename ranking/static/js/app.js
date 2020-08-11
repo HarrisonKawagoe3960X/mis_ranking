@@ -5,10 +5,15 @@ $(document).ready(function() {
                'url':'/getinf?id='+$("#gameid").val(),
                'type':'GET',
                'success':function(response){
-                 console.log(response);
                      $('#rankinf').text(JSON.stringify(response));
                },
            });
+  });
+
+  $('#csv').on('click', function() {
+    console.log(114514);
+    window.location.href='/getcsv?id='+$("#gameid").val();
+    return false;
   });
 
   $('#submit_form').submit(function() {
